@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Form</title>
+
+  <style>
+    /* Your existing CSS styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Roboto', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(to right, #f3f4f6, #ffffff);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      color: #333;
+    }
+
+    .login-container {
+      background-color: rgba(255, 255, 255, 0.9);
+      padding: 50px;
+      border-radius: 15px;
+      width: 100%;
+      max-width: 450px;
+      text-align: center;
+      position: relative;
+      z-index: 1;
+      border: 2px solid transparent;
+    }
+
+    .login-container {
+      box-shadow: 0 0 10px #00ff99, 0 0 20px #00ccff, 0 0 30px #ff00cc, 0 0 40px #ff9900;
+    }
+
+    h2 {
+      margin-bottom: 20px;
+      font-size: 28px;
+      font-weight: 500;
+      color: #333;
+      letter-spacing: 1px;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .form-group input {
+      width: 100%;
+      padding: 15px;
+      font-size: 16px;
+      color: #333;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      background-color: #fff;
+      transition: 0.3s;
+    }
+
+    .form-group input:focus {
+      outline: none;
+      border-color: #2575fc;
+      box-shadow: 0 0 5px rgba(37, 117, 252, 0.7);
+    }
+
+    .btn {
+      width: 100%;
+      padding: 15px;
+      background-color: #2575fc;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      font-size: 18px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background-color: #6a11cb;
+    }
+
+    .forgot-password {
+      margin-top: 10px;
+      font-size: 14px;
+      color: #333;
+    }
+
+    .forgot-password a {
+      color: #2575fc;
+      text-decoration: underline;
+    }
+
+    .forgot-password a:hover {
+      color: #6a11cb;
+    }
+
+    .social-login {
+      margin-top: 20px;
+    }
+
+    .social-login p {
+      font-size: 16px;
+      color: #333;
+    }
+
+    .social-login a {
+      padding: 12px;
+      border-radius: 50%;
+      margin: 5px;
+      background-color: #fff;
+      color: #333;
+      font-size: 20px;
+      transition: 0.3s;
+    }
+
+    .social-login a:hover {
+      background-color: #2575fc;
+      color: #fff;
+    }
+
+    .social-icons {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="login-container">
+    <h2 style="font-weight:bold">Login to Your Account</h2><br>
+    <form action="login.php" method="POST">
+      <!-- Email Field -->
+      <div class="form-group">
+        <input type="email" name="email" placeholder="Email" required />
+      </div>
+      <br>
+
+      <!-- Password Field -->
+      <div class="form-group">
+        <input type="password" name="password" placeholder="Password" required />
+      </div><br>
+
+      <button type="submit" class="btn">Login</button>
+    </form>
+    
+    <?php if (isset($_GET['error'])) { ?>
+      <div style="color: red; margin-top: 20px;">
+        <strong><?php echo $_GET['error']; ?></strong>
+      </div>
+    <?php } ?>
+
+    <div class="forgot-password"><br>
+      <a href="#">Forgot your password?</a>
+    </div>
+    <div><br>
+      <p style="color:black">New user? <a href="register.html" style="font-style:italic">Register</a></p>
+    </div>
+  </div>
+
+</body>
+</html>

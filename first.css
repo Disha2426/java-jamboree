@@ -1,0 +1,148 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f6f9;
+}
+
+.level-selection {
+  padding: 20px;
+  text-align: center;
+}
+
+#quiz-container {
+  display: none;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 30px;
+  gap: 40px;
+}
+
+#quiz-box {
+  flex: 1;
+  background-color: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.question-container h3 {
+  margin: 0;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.options {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.option-btn {
+  background-color: #e2e8f0;
+  padding: 15px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+
+.option-btn:hover {
+  background-color: #cbd5e1;
+}
+
+.option-btn.green {
+  background-color: #c8f7c5;
+  color: #1e4620;
+}
+
+.option-btn.red {
+  background-color: #f7c5c5;
+  color: #641414;
+}
+
+.controls {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+
+button.submit-btn,
+button.skip-btn,
+button.back-btn {
+  padding: 10px 25px;
+  border: none;
+  border-radius: 6px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+button.submit-btn {
+  background-color: #4CAF50;
+}
+
+button.skip-btn {
+  background-color: #f57c00;
+}
+
+button.back-btn {
+  background-color: #2196F3;
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.info-link {
+  margin-top: 15px;
+  text-align: left;
+}
+
+.info-link a {
+  color: #007BFF;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.info-link a:hover {
+  text-decoration: underline;
+}
+
+#timer {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+#question-status-list {
+  list-style: none;
+  padding-left: 0;
+  font-size: 14px;
+}
+
+#question-status-list li {
+  margin-bottom: 8px;
+}
+
+#final-scoreboard {
+  display: none;
+  text-align: center;
+  padding: 40px;
+}
+
+#final-scoreboard h2 {
+  font-size: 24px;
+  color: #333;
+}
+
+#final-score {
+  font-size: 28px;
+  font-weight: bold;
+  margin-top: 20px;
+}

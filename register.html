@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register Form</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+    /* General Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Roboto', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(to right, #f3f4f6, #ffffff); /* Very light gray to white gradient */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      color: #333;
+    }
+
+    .register-container {
+      background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent white background for the form */
+      padding: 35px;
+      border-radius: 15px;
+      width: 100%;
+      max-width: 450px; /* Larger form box */
+      text-align: center;
+      position: relative;
+      z-index: 1;
+      border: 2px solid transparent; /* Transparent border to hold neon effect */
+    }
+
+    /* Neon Border Effect (static) */
+    .register-container {
+      box-shadow: 0 0 10px #00ff99, 0 0 20px #00ccff, 0 0 30px #ff00cc, 0 0 40px #ff9900;
+    }
+
+    h2 {
+      margin-bottom: 20px;
+      font-size: 28px;
+      font-weight: 500;
+      color: #333;
+      letter-spacing: 1px;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .form-group input {
+      width: 100%;
+      padding: 15px;
+      font-size: 16px;
+      color: #333;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      background-color: #fff;
+      transition: 0.3s;
+    }
+
+    .form-group input:focus {
+      outline: none;
+      border-color: #2575fc;
+      box-shadow: 0 0 5px rgba(37, 117, 252, 0.7);
+    }
+
+    .btn {
+      width: 100%;
+      padding: 15px;
+      background-color: #2575fc;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      font-size: 18px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background-color: #6a11cb;
+    }
+
+    .login-link {
+      margin-top: 10px;
+      font-size: 14px;
+      color: #333;
+    }
+
+    .login-link a {
+      color: #2575fc;
+      text-decoration: underline;
+    }
+
+    .login-link a:hover {
+      color: #6a11cb;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="register-container">
+    <h1>Register</h1><br>
+    <form action="register.php" method="POST">
+      <!-- Username Field -->
+      <div class="form-group">
+        <input type="text" name="username" placeholder="Username" required />
+      </div>
+
+      <!-- Email Field -->
+      <div class="form-group">
+        <input type="email" name="email" placeholder="Email" required />
+      </div>
+
+      <!-- Password Field -->
+      <div class="form-group">
+        <input type="password" name="password" placeholder="Password" required />
+      </div>
+
+      <!-- Confirm Password Field -->
+      <div class="form-group">
+        <input type="password" name="confirm_password" placeholder="Confirm Password" required />
+      </div>
+
+      <button type="submit" class="btn">Register</button>
+    </form>
+
+    <div class="login-link"><br>
+      <p>Already have an account? <a href="form.html">Login here</a></p>
+    </div>
+  </div>
+
+</body>
+</html>

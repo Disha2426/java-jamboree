@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Quiz Levels</title>
+  <link rel="stylesheet" href="first.css">
+</head>
+<body>
+
+  <div class="level-selection">
+    <h1>Select Quiz Level</h1>
+    <button class="level-btn" onclick="startQuiz(101)">Easy</button>
+    <button class="level-btn" onclick="startQuiz(102)">Moderate</button>
+    <button class="level-btn" onclick="startQuiz(103)">Hard</button>
+  </div>
+
+  <div class="quiz-container" id="quiz-container">
+    <div class="quiz-box" id="quiz-box">
+      <!-- Quiz will be dynamically loaded here -->
+    </div>
+    <div class="dashboard">
+      <div class="timer" id="timer">Time: 0s</div>
+      <div class="scoreboard" id="scoreboard">Score: 0</div>
+      <div class="question-status">
+        <ul id="question-status-list"></ul>
+      </div>
+    </div>
+  </div>
+
+  <div id="final-scoreboard">
+    <h2>Your Final Score: <span id="final-score"></span></h2>
+    <button id="next-level-button" onclick="location.reload()">Try Another Level</button>
+    <div class="resources">
+      <a href="index.html">Back to Home</a>
+    </div>
+  </div>
+
+  <script src="quiz.js"></script>
+</body>
+</html>

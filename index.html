@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Java Jamboree Quiz</title>
+    <link rel="stylesheet" href="first.css">
+</head>
+<body>
+
+    <div class="level-selection">
+        <button class="level-btn" onclick="fetchQuestions(101)">Easy</button>
+        <button class="level-btn" onclick="fetchQuestions(102)">Moderate</button>
+        <button class="level-btn" onclick="fetchQuestions(103)">Hard</button>
+    </div>
+
+    <div id="quiz-container" class="quiz-container">
+        <div class="quiz-box">
+            <div id="question-text" class="question-container"></div>
+            <div id="options-container" class="options"></div>
+        </div>
+    </div>
+
+    <div id="final-scoreboard">
+        <h2>Your Score: <span id="final-score"></span></h2>
+        <button onclick="location.reload()" id="next-level-button">Try Another Level</button>
+    </div>
+
+    <script src="ut.js"></script>
+</body>
+</html>
